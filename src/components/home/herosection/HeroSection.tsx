@@ -1,6 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import ThumbCard from "./ThumbCard/ThumbCard";
+import PreviewGallery from "./ThumbCard/PreviewGallery";
+import CourceSell from "./CourceSell";
+import CourseOutlate from "./CourseOutlate";
 
 const HeroSection: React.FC = () => {
   return (
@@ -14,8 +17,11 @@ const HeroSection: React.FC = () => {
         }}
         className="min-h-[300px] md:min-h-[300px] flex items-center md:py-0 py-7"
       >
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4 container mx-auto lg:px-[10rem]">
-          <div className="col-span-3 text-white space-y-5 order-2 md:order-1">
+        <div className="md:grid grid-cols-1 md:grid-cols-5 gap-4 container mx-auto lg:px-[10rem]">
+          <div className="md:hidden block">
+            <PreviewGallery />
+          </div>
+          <div className="col-span-3 text-white space-y-5 order-2 md:order-1 md:px-0 px-2">
             <h1 className="text-white my-2 text-[21px] font-semibold  md:text-4xl">
               IELTS Course by Munzereen Shahid
             </h1>
@@ -48,6 +54,10 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
       </section>
+      <div className="md:hidden block px-1 py-2 space-y-2">
+        <CourceSell />
+        <CourseOutlate />
+      </div>
     </>
   );
 };
