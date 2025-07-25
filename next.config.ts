@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "cdn.10minuteschool.com",
       },
+      {
+        protocol: "https",
+        hostname: "cdn.10minuteschool.com",
+      },
     ],
   },
 };

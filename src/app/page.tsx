@@ -1,8 +1,12 @@
+import HeroSection from "@/components/home/herosection/HeroSection";
+
 export default function Home() {
   console.log(process.env.NEXT_PUBLIC_API_BASE_URL);
   return (
     <>
-      <h1 className="text-7xl font-extrabold text-red-500 animate-bounce text-center my-5"></h1>
+      <main>
+        <HeroSection />
+      </main>
     </>
   );
 }
