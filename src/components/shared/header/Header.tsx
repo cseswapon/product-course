@@ -13,7 +13,7 @@ const Header: React.FC = () => {
   return (
     <header className="sticky top-0 z-50 border-b border-[#dbe1eb] bg-white md:h-[65px]">
       <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-3 px-4 py-3 md:px-7">
-        <div className="flex gap-2">
+        <div className="flex gap-2 md:hidden">
           <button
             className="xl:hidden"
             type="button"
