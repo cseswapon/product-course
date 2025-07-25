@@ -15,7 +15,7 @@ const HeroSection: React.FC = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="min-h-[300px] md:min-h-[300px] flex items-center md:py-0 py-7"
+        className="min-h-[300px] md:min-h-[300px] flex items-center md:py-0 py-7 z-[9]"
       >
         <div className="md:grid grid-cols-1 md:grid-cols-5 gap-4 container mx-auto lg:px-[10rem]">
           <div className="md:hidden block">
