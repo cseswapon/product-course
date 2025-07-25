@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import ThumbCard from "./ThumbCard/ThumbCard";
 
 const HeroSection: React.FC = () => {
   return (
@@ -42,7 +43,9 @@ const HeroSection: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="col-span-2 text-white order-1 md:order-2">hello</div>
+          <div className="col-span-2 text-white order-1 md:order-2 relative">
+            <ThumbCard />
+          </div>
         </div>
       </section>
     </>
