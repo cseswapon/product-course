@@ -87,51 +87,48 @@ const Header: React.FC = () => {
         </div>
         <nav className="hidden mr-4 xl:block">
           <ul className="flex items-center gap-2 lg:gap-4 text-sm font-medium text-[#4B5563]">
-            <li>
-              <Link
-                className="hover:text-green-500 flex items-center text-[14px]"
-                href="/academic"
-              >
-                ক্লাস ৬-১২{" "}
-                <MdOutlineKeyboardArrowDown className="inline-block text-lg font-extrabold" />
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="hover:text-green-500 flex items-center text-[14px]"
-                href="/skills"
-              >
-                স্কিলস{" "}
-                <MdOutlineKeyboardArrowDown className="inline-block text-lg font-extrabold" />
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="hover:text-green-500 flex items-center text-[14px]"
-                href="/admission"
-              >
-                ভর্তি পরীক্ষা{" "}
-                <MdOutlineKeyboardArrowDown className="inline-block text-lg font-extrabold" />
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="hover:text-green-500 flex items-center text-[14px]"
-                href="/online-batch"
-              >
-                অনলাইন ব্যাচ{" "}
-                <MdOutlineKeyboardArrowDown className="inline-block text-lg font-extrabold" />
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="hover:text-green-500 flex items-center text-[14px]"
-                href="/english-centre"
-              >
-                ইংলিশ সেন্টার{" "}
-                <MdOutlineKeyboardArrowDown className="inline-block text-lg font-extrabold" />
-              </Link>
-            </li>
+            {[
+              "academic",
+              "skills",
+              "admission",
+              "online-batch",
+              "english-centre",
+            ].map((item) => (
+              <li className="relative group" key={item}>
+                <Link
+                  className="hover:text-green-500 flex items-center text-[14px]"
+                  href={`/${item}`}
+                >
+                  {item === "academic" && "ক্লাস ৬-১২"}
+                  {item === "skills" && "স্কিলস"}
+                  {item === "admission" && "ভর্তি পরীক্ষা"}
+                  {item === "online-batch" && "অনলাইন ব্যাচ"}
+                  {item === "english-centre" && "ইংলিশ সেন্টার"}
+                  <MdOutlineKeyboardArrowDown className="inline-block text-lg font-extrabold" />
+                </Link>
+
+                <div className="absolute -left-3 top-3 hidden mt-2 space-y-2 bg-white border-gray-50  shadow-md group-hover:block w-max">
+                  <Link
+                    href={`/sub-menu/${item}`}
+                    className="text-[#4B5563] text-sm font-medium px-4 py-2 hover:bg-gray-100 block"
+                  >
+                    Content Item 1
+                  </Link>
+                  <Link
+                    href={`/sub-menu/${item}`}
+                    className="text-[#4B5563] text-sm font-medium px-4 py-2 hover:bg-gray-100 block"
+                  >
+                    Content Item 2
+                  </Link>
+                  <Link
+                    href={`/sub-menu/${item}`}
+                    className="text-[#4B5563] text-sm font-medium px-4 py-2 hover:bg-gray-100 block"
+                  >
+                    Content Item 3
+                  </Link>
+                </div>
+              </li>
+            ))}
             <li>
               <Link
                 className="hover:text-green-500 flex items-center text-[14px]"
