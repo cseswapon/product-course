@@ -9,6 +9,7 @@ import {
   FaYoutube,
   FaTiktok,
 } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
@@ -29,8 +30,8 @@ const Footer: React.FC = () => {
             আমাদের মোবাইল অ্যাপ ডাউনলোড করুন
           </h3>
           <div className="mb-5 flex justify-center md:justify-start gap-3">
-            <a
-              href="https://play.google.com/store/apps/details?id=com.a10minuteschool.tenminuteschool"
+            <Link
+              href="https://play.google.com/store/Linkpps/details?id=com.a10minuteschool.tenminuteschool"
               target="_blank"
               rel="noreferrer"
             >
@@ -40,9 +41,9 @@ const Footer: React.FC = () => {
                 width={140}
                 height={42}
               />
-            </a>
-            <a
-              href="https://apps.apple.com/us/app/10-minute-school/id1577061772"
+            </Link>
+            <Link
+              href="https://Linkpps.apple.com/us/Linkpp/10-minute-school/id1577061772"
               target="_blank"
               rel="noreferrer"
             >
@@ -52,38 +53,38 @@ const Footer: React.FC = () => {
                 width={140}
                 height={42}
               />
-            </a>
+            </Link>
           </div>
         </div>
 
         <div className="widget text-left">
           <h3 className="widget-title mb-2 text-lg font-bold">কোম্পানি</h3>
           <ul>
-            <li className="mb-2 hover:text-green-600">
-              <a href="/careers">ক্যারিয়ার / নিয়োগ বিজ্ঞপ্তি</a>
+            <li className="my-4 hover:text-green-600">
+              <Link href="/careers">ক্যারিয়ার / নিয়োগ বিজ্ঞপ্তি</Link>
             </li>
-            <li className="mb-2 hover:text-green-600">
-              <a
+            <li className="my-4 hover:text-green-600">
+              <Link
                 href="https://docs.google.com/forms/d/e/1FAIpQLScWh9jjyWnUKdDKET1-LHvdTxuU6-ssd0GLTI-0JlQ2MH6RzA/viewform"
                 target="_blank"
                 rel="noreferrer"
               >
                 শিক্ষক হিসাবে যোগ দিন
-              </a>
+              </Link>
             </li>
-            <li className="mb-2 hover:text-green-600">
-              <a href="//affiliation.10minuteschool.com/">
+            <li className="my-4 hover:text-green-600">
+              <Link href="//Linkffiliation.10minuteschool.com/">
                 অ্যাফিলিয়েট হিসাবে যোগ দিন
-              </a>
+              </Link>
             </li>
-            <li className="mb-2 hover:text-green-600">
-              <a href="/privacy-policy">প্রাইভেসি পলিসি</a>
+            <li className="my-4 hover:text-green-600">
+              <Link href="/privacy-policy">প্রাইভেসি পলিসি</Link>
             </li>
-            <li className="mb-2 hover:text-green-600">
-              <a href="/refund-policy">রিফান্ড পলিসি</a>
+            <li className="my-4 hover:text-green-600">
+              <Link href="/refund-policy">রিফান্ড পলিসি</Link>
             </li>
-            <li className="mb-2 hover:text-green-600">
-              <a href="/terms-and-conditions">ব্যবহারকারীর শর্তাবলী</a>
+            <li className="my-4 hover:text-green-600">
+              <Link href="/terms-and-conditions">ব্যবহারকারীর শর্তাবলী</Link>
             </li>
           </ul>
         </div>
@@ -91,59 +92,59 @@ const Footer: React.FC = () => {
         <div className="widget text-left">
           <h3 className="widget-title mb-2 text-lg font-bold">অন্যান্য</h3>
           <ul>
-            <li className="mb-2 hover:text-green-600">
-              <a
+            <li className="my-4 hover:text-green-600">
+              <Link
                 href="https://blog.10minuteschool.com/"
                 target="_blank"
                 rel="noreferrer"
               >
                 ব্লগ
-              </a>
+              </Link>
             </li>
-            <li className="mb-2 hover:text-green-600">
-              <a
-                href="https://10minuteschool.com/store/all/"
+            <li className="my-4 hover:text-green-600">
+              <Link
+                href="https://10minuteschool.com/store/Linkll/"
                 target="_blank"
                 rel="noreferrer"
               >
                 বুক স্টোর
-              </a>
+              </Link>
             </li>
-            <li className="mb-2 hover:text-green-600">
-              <a
+            <li className="my-4 hover:text-green-600">
+              <Link
                 href="https://10minuteschool.com/content/"
                 target="_blank"
                 rel="noreferrer"
               >
                 ফ্রি নোটস ও গাইড
-              </a>
+              </Link>
             </li>
-            <li className="mb-2 hover:text-green-600">
-              <a
+            <li className="my-4 hover:text-green-600">
+              <Link
                 href="https://10minuteschool.com/jobs-prep"
                 target="_blank"
                 rel="noreferrer"
               >
                 চাকরি প্রস্তুতি কোর্সসমূহ
-              </a>
+              </Link>
             </li>
-            <li className="mb-2 hover:text-green-600">
-              <a
+            <li className="my-4 hover:text-green-600">
+              <Link
                 href="https://10minuteschool.com/certificate/"
                 target="_blank"
                 rel="noreferrer"
               >
                 সার্টিফিকেট ভেরিফাই করুন
-              </a>
+              </Link>
             </li>
-            <li className="mb-2 hover:text-green-600">
-              <a
+            <li className="my-4 hover:text-green-600">
+              <Link
                 href="https://10minuteschool.com/resource"
                 target="_blank"
                 rel="noreferrer"
               >
                 ফ্রি ডাউনলোড
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -153,69 +154,69 @@ const Footer: React.FC = () => {
             আমাদের সাথে যোগাযোগ করুন
           </h3>
           <ul className="mb-5 text-sm">
-            <li>
+            <li className="my-4">
               <strong>কল করুন:</strong>{" "}
-              <a href="tel:16910" className="text-green-700 hover:underline">
+              <Link href="tel:16910" className="text-green-700 hover:underline">
                 16910
-              </a>{" "}
+              </Link>{" "}
               (24x7)
             </li>
-            <li>
+            <li className="my-4">
               <strong>হোয়াটসঅ্যাপ:</strong>{" "}
-              <a
-                href="https://api.whatsapp.com/send?phone=+8801896016252&text=I need your assistance"
+              <Link
+                href="https://Linkpi.whatsapp.com/send?phone=+8801896016252&text=I need your assistance"
                 className="text-green-700 hover:underline"
               >
                 +8801896016252
-              </a>
+              </Link>
             </li>
-            <li>
+            <li className="my-4">
               <strong>ইমেইল:</strong>{" "}
-              <a
+              <Link
                 href="mailto:support@10minuteschool.com"
                 className="text-green-700 hover:underline"
               >
                 support@10minuteschool.com
-              </a>
+              </Link>
             </li>
           </ul>
 
           <div className="flex md:justify-start justify-center gap-3">
-            <a
+            <Link
               href="https://www.facebook.com/10minuteschool/"
               target="_blank"
               rel="noreferrer"
             >
               <FaFacebookF className="text-xl hover:scale-110 transition-transform" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.instagram.com/10ms_insta/"
               target="_blank"
               rel="noreferrer"
             >
               <FaInstagram className="text-xl hover:scale-110 transition-transform" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.linkedin.com/company/10ms/"
               target="_blank"
               rel="noreferrer"
             >
               <FaLinkedinIn className="text-xl hover:scale-110 transition-transform" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.youtube.com/channel/UCL89KKkLs0tZKld-iIS3NGw"
               target="_blank"
               rel="noreferrer"
             >
               <FaYoutube className="text-xl hover:scale-110 transition-transform" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.tiktok.com/@10minuteschool?lang=en"
               target="_blank"
               rel="noreferrer"
             >
               <FaTiktok className="text-xl hover:scale-110 transition-transform" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
