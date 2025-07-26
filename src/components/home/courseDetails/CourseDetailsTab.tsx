@@ -51,7 +51,7 @@ const CourseDetailsTab: React.FC = () => {
   };
 
   return (
-    <div className="relative w-full border-b border-gray-200 bg-white py-2 my-2">
+    <div className="sticky w-full border-gray-200 bg-white py-2 my-2 top-[4rem] z-10">
       <button
         onClick={() => scroll("left")}
         className="absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow z-10"
