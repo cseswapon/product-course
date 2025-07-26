@@ -26,7 +26,7 @@ const Testimonial: React.FC = () => {
   };
 
   return (
-    <Element name="Testimonials">
+    <Element name="testimonials">
       <h1 className="mb-4 text-xl font-semibold md:text-2xl">
         আপনার জন্য আরও কিছু কোর্স
       </h1>

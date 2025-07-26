@@ -4,7 +4,7 @@ import { Element } from "react-scroll";
 
 const CourseLearning: React.FC = () => {
   return (
-    <Element name="Pointers">
+    <Element name="pointers">
       <div className="mb-6 md:mb-10 relative bg-[#E5E7EB] py-2 md:bg-white md:py-0">
         <div className="pt-6 pb-6 bg-white md:pb-0 md:pt-0">
           <div>

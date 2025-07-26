@@ -39,7 +39,7 @@ const CourseFeature = () => {
   ];
 
   return (
-    <Element name="Features">
+    <Element name="features">
       <div className="flex flex-col gap-3">
         <h2 className="text-xl font-semibold leading-[30px] text-black">
           কোর্সটি যেভাবে সাজানো হয়েছে

@@ -22,7 +22,7 @@ const CourseLayout: React.FC<CourseLayoutProps> = ({ course }) => {
   // console.log(course);
   return (
     <>
-      <CourseDetailsTab />
+      <CourseDetailsTab section={course.sections} />
       <CourseInstructor />
       <CourseFeature />
       <GroupJoinEngagement />

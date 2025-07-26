@@ -1,32 +1,15 @@
 "use client";
 
+import { Section } from "@/types/course";
 import React, { useRef, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Link } from "react-scroll";
 
-// const tabs = [
-//   "Instructors",
-//   "Features",
-//   "Pointers",
-//   "About",
-//   "Feature_explanations",
-//   "Free_items",
-//   "Testimonials",
-//   "Faq",
-// ];
-const tabs = [
-  { en: "Instructors", bn: "কোর্স ইন্ট্রোডাকশন" },
-  { en: "Features", bn: "কোর্সটি যেভাবে সাজানো হয়েছে" },
-  { en: "Pointers", bn: "কোর্সটি করে যা শিখবেন" },
-  { en: "About", bn: "কোর্স সম্পর্কে বিস্তারিত" },
-  { en: "Feature_explanations", bn: "কোর্স এক্সক্লুসিভ ফিচার" },
-  { en: "Testimonials", bn: "শিক্ষার্থীরা যা বলছে" },
-  { en: "Faq", bn: "সচরাচর জিজ্ঞাসা" },
-  // "Free_items" is missing in the Bangla version, so leaving it blank
-  { en: "Free_items", bn: "" },
-];
+interface CourseDetailsTabProps { 
+  section: Section[]
+}
 
-const CourseDetailsTab: React.FC = () => {
+const CourseDetailsTab: React.FC<CourseDetailsTabProps> = ({section}) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -64,12 +47,12 @@ const CourseDetailsTab: React.FC = () => {
   };
 
   return (
-    <div className="sticky w-full border-gray-200 bg-white py-2 my-2 top-[4rem] z-10">
+    <div className="sticky w-full border-gray-200 bg-white py-2 my-2 md:top-[4rem] top-[3rem] z-10">
       <button
         onClick={() => scroll("left")}
-        className="absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow z-10"
+        className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-400  cursor-pointer p-2 rounded-full shadow z-10"
       >
-        <FaChevronLeft className="text-gray-500" />
+        <FaChevronLeft className="text-white" />
       </button>
 
       <div
@@ -80,29 +63,32 @@ const CourseDetailsTab: React.FC = () => {
         onMouseLeave={handleMouseUp}
         onMouseUp={handleMouseUp}
       >
-        {tabs.map((tab, index) => (
-          <Link
-            to={tab.en}
-            smooth={true}
-            duration={500}
-            key={index}
-            onClick={() => setActiveIndex(index)}
-            className={`whitespace-nowrap text-[1rem] pb-1 border-b-2 transition-all duration-200 ${
-              activeIndex === index
-                ? "border-green-600 text-green-600 font-semibold"
-                : "border-transparent text-gray-600 hover:text-green-500"
-            }`}
-          >
-            {tab.bn}
-          </Link>
-        ))}
+        {section.map(
+          (tab, index) =>
+            tab.name.length > 0 && (
+              <Link
+                to={tab.type}
+                smooth={true}
+                duration={500}
+                key={index}
+                onClick={() => setActiveIndex(index)}
+                className={`whitespace-nowrap text-[1rem] pb-1 border-b-2 transition-all duration-200 ${
+                  activeIndex === index
+                    ? "border-green-600 text-green-600 font-semibold"
+                    : "border-transparent text-gray-600 hover:text-green-500"
+                }`}
+              >
+                {tab.name}
+              </Link>
+            )
+        )}
       </div>
 
       <button
         onClick={() => scroll("right")}
-        className="absolute right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow z-10"
+        className="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-400 p-2 rounded-full shadow z-10"
       >
-        <FaChevronRight className="text-gray-500" />
+        <FaChevronRight className="text-white" />
       </button>
     </div>
   );

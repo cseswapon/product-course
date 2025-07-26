@@ -32,7 +32,7 @@ const CourseAsking = () => {
   };
 
   return (
-    <Element name="Faq">
+    <Element name="faq">
       <div className="mb-5">
         <h1 className="mb-2 text-xl font-semibold md:mb-4">সচরাচর জিজ্ঞাসা</h1>
         <Collapse
