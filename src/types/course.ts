@@ -1,8 +1,8 @@
 export interface CourseMedia {
   name: string;
   resource_type: string;
-  resource_value?: string | undefined;
-  thumbnail_url?: string | undefined;
+  resource_value?: string;
+  thumbnail_url?: string;
 }
 
 export interface CheckList {
@@ -22,14 +22,20 @@ export interface OldInfo {
 }
 
 interface Value {
-  background_color: string;
-  background_img: string;
-  checklist_text_color: string;
-  end_at: string;
-  id: string;
-  start_at: string;
-  template: string;
-  text: string;
+  background_color?: string;
+  background_img?: string;
+  checklist_text_color?: string;
+  end_at?: string;
+  id?: string;
+  start_at?: string;
+  template?: string;
+  text?: string;
+  name?: string;
+  description?: string;
+  has_instructor_page?: boolean;
+  image?: string;
+  short_description?: string;
+  slug?: string;
 }
 
 export interface Section {
@@ -66,7 +72,7 @@ export interface Course {
 
 export interface ApiResponse {
   code: number;
-  data: Course;
+  data: Partial<Course>;
   error?: [];
   message: string;
   payload: [];

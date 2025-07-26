@@ -20,10 +20,13 @@ interface CourseLayoutProps {
 
 const CourseLayout: React.FC<CourseLayoutProps> = ({ course }) => {
   // console.log(course);
+  const instructor = course.sections.find(
+    (item) => item.type === "instructors"
+  );
   return (
     <>
       <CourseDetailsTab section={course.sections} />
-      <CourseInstructor />
+      {instructor && <CourseInstructor section={instructor} />}
       <CourseFeature />
       <GroupJoinEngagement />
       <CourseLearning />
