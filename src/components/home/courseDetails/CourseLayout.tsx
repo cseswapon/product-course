@@ -19,15 +19,16 @@ interface CourseLayoutProps {
 }
 
 const CourseLayout: React.FC<CourseLayoutProps> = ({ course }) => {
-  // console.log(course);
+  console.log(course.sections);
   const instructor = course.sections.find(
     (item) => item.type === "instructors"
   );
+  const feature = course.sections.find((item) => item.type === "features");
   return (
     <>
       <CourseDetailsTab section={course.sections} />
-      {instructor && <CourseInstructor section={instructor} />}
-      <CourseFeature />
+      {instructor && <CourseInstructor section={instructor || []} />}
+      {feature && <CourseFeature features={feature || []} />}
       <GroupJoinEngagement />
       <CourseLearning />
       <CourseContentpreview />

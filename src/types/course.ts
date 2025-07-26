@@ -36,6 +36,9 @@ interface Value {
   image?: string;
   short_description?: string;
   slug?: string;
+  icon?: string;
+  subtitle?: string;
+  title?: string;
 }
 
 export interface Section {
