@@ -6,14 +6,25 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TestimonialCard from "./TestimonialCard";
 import { Element } from "react-scroll";
+import { Section } from "@/types/course";
 
-const Testimonial: React.FC = () => {
+interface CoursePointerProps {
+  testimonials: Section;
+}
+
+const Testimonial: React.FC<CoursePointerProps> = ({ testimonials }) => {
+  const { values } = testimonials;
+
+  console.log(values);
+
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 2,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 768,
@@ -32,23 +43,18 @@ const Testimonial: React.FC = () => {
       </h1>
       <div className="slider-container">
         <Slider {...settings}>
-          <div>
-            <TestimonialCard
-              text="ঘরে বসে Spoken English কোর্সটি করে বুঝতে পারলাম শত শত গ্রামে শেখার কোনো প্রয়োজন নেই..."
-              name="Khama Rani Bose"
-              designation="ভর্তি পরীক্ষার্থী"
-              userImage="https://cdn.10minuteschool.com/images/images/skills/Testimonial/user2.png"
-            />
-          </div>
-          <div>
-            <TestimonialCard
-              videoUrl="https://www.youtube.com/embed/L61TXe0cmas"
-              thumb="https://cdn.10minuteschool.com/images/catalog/product/testimonial/L61TXe0cmas-HD_1727333220204.jpg"
-              name="Tilottoma Sengupta"
-              designation="শিক্ষার্থী"
-              userImage="https://cdn.10minuteschool.com/images/images/skills/Testimonial/user2.png"
-            />
-          </div>
+          {values?.map((item, idx) => (
+            <div key={idx}>
+              <TestimonialCard
+                text={item?.testimonial || ""}
+                name={item?.name || ""}
+                designation={item?.description || ""}
+                userImage={item?.profile_image || ""}
+                thumb={item?.thumb || ""}
+                videoUrl={item?.video_url || ""}
+              />
+            </div>
+          ))}
         </Slider>
       </div>
     </Element>

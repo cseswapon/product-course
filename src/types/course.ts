@@ -58,6 +58,12 @@ interface Value {
   video_thumbnail?: string;
   answer?: string;
   question?: string;
+
+  profile_image: string;
+  testimonial: string;
+  thumb: string;
+  video_type: string;
+  video_url: string;
 }
 
 export interface Section {

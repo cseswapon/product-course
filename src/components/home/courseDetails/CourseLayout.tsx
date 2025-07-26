@@ -38,6 +38,10 @@ const CourseLayout: React.FC<CourseLayoutProps> = ({ course }) => {
     (item) => item.type === "feature_explanations"
   );
   const faq = course.sections.find((item) => item.type === "faq");
+  const testimonials = course.sections.find(
+    (item) => item.type === "testimonials"
+  );
+
 
 
   return (
@@ -60,7 +64,7 @@ const CourseLayout: React.FC<CourseLayoutProps> = ({ course }) => {
       <StudentReview />
       <CourseClalssNeed />
       {faq && <CourseAsking faq={faq} />}
-      <Testimonial />
+      {testimonials && <Testimonial testimonials={testimonials} />}
     </>
   );
 };
