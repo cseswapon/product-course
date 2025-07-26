@@ -9,7 +9,7 @@ interface HeroSectionProps {
   course: Course;
 }
 const HeroSection: React.FC<HeroSectionProps> = ({ course }) => {
-  console.log(course);
+  // console.log(course);
   return (
     <>
       <section
@@ -23,7 +23,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ course }) => {
       >
         <div className="md:grid grid-cols-1 md:grid-cols-5 gap-4 container mx-auto lg:px-[10rem]">
           <div className="md:hidden block">
-            <PreviewGallery />
+            <PreviewGallery resources={course.media}/>
           </div>
           <div className="col-span-3 text-white space-y-5 order-2 md:order-1 md:px-0 px-2">
             <h1 className="text-white my-2 text-[21px] font-semibold  md:text-4xl">
@@ -45,21 +45,19 @@ const HeroSection: React.FC<HeroSectionProps> = ({ course }) => {
               </button>
             </div>
             <div>
-              <p className="text-gray-400 text-[15px] text-justify">
-                Academic IELTS এবং General Training IELTS- এর কমপ্লিট প্রিপারেশন
-                নিন একটি কোর্সেই! দেশসেরা IELTS Instructor এর গাইডলাইনে আপনার
-                কাঙ্ক্ষিত ব্যান্ড স্কোরটি অর্জন করতে আজই জয়েন করুন আমাদের IELTS
-                Course-এ।{" "}
-              </p>
+              <p
+                dangerouslySetInnerHTML={{ __html: course.description }}
+                className="text-gray-400 text-[15px] text-justify"
+              ></p>
             </div>
           </div>
           <div className="col-span-2 text-white order-1 md:order-2 relative">
-            <ThumbCard />
+            <ThumbCard course={course} />
           </div>
         </div>
       </section>
       <div className="md:hidden block px-1 py-2 space-y-2">
-        <CourceSell />
+        <CourceSell sell={course.cta_text} />
         <CourseOutlate />
       </div>
     </>

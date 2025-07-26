@@ -3,14 +3,19 @@ import { IoMdCall } from "react-icons/io";
 import PreviewGallery from "./PreviewGallery";
 import CourceSell from "../CourceSell";
 import CourseOutlate from "../CourseOutlate";
+import { Course } from "@/types/course";
 
-const ThumbCard: React.FC = () => {
-  
+interface ThubCardProps {
+  course: Course;
+}
+
+const ThumbCard: React.FC<ThubCardProps> = ({ course }) => {
+  // console.log(course.media);
   return (
     <section className="w-full md:max-w-[330px] lg:max-w-[400px] order-2 md:bg-white absolute right-0 md:top-0 md:absolute z-[9]">
       <div className="md:border-[#dbe1eb] md:border overflow-hidden">
         <div className="md:block hidden md:border">
-          <PreviewGallery />
+          <PreviewGallery resources={course.media} />
         </div>
         <div className="hidden md:block">
           <div
@@ -19,7 +24,7 @@ const ThumbCard: React.FC = () => {
             id="variant"
           >
             <div className="relative md:static">
-              <CourceSell />
+              <CourceSell sell={course.cta_text} />
 
               {/* Optional Decorative Div */}
               <div className="absolute md:static top-[-45px] left-0">
@@ -29,7 +34,7 @@ const ThumbCard: React.FC = () => {
           </div>
         </div>
         <div className="hidden md:block">
-          <CourseOutlate/>
+          <CourseOutlate />
         </div>
       </div>
       <div className="justify-between hidden mt-4 text-sm text-center text-gray-400 md:flex md:flex-col lg:flex lg:flex-row">

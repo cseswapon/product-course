@@ -1,8 +1,8 @@
 export interface CourseMedia {
   name: string;
   resource_type: string;
-  resource_value?: string;
-  thumbnail_url?: string;
+  resource_value?: string | undefined;
+  thumbnail_url?: string | undefined;
 }
 
 export interface CheckList {

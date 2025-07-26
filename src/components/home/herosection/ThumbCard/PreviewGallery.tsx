@@ -3,54 +3,20 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { FaPlay, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { CourseMedia } from "@/types/course";
 
-type Resource = {
-  name: string;
-  resource_type: "video" | "image";
-  resource_value: string;
-  thumbnail_url?: string;
-};
+interface PreviewGalleryProps {
+  resources: CourseMedia[];
+}
 
-const resources: Resource[] = [
-  {
-    name: "preview_gallery",
-    resource_type: "video",
-    resource_value: "zrlYnaZftEQ",
-    thumbnail_url:
-      "https://cdn.10minuteschool.com/images/thumbnails/IELTS_new_16_9.png",
-  },
-  {
-    name: "sqr_img",
-    resource_type: "image",
-    resource_value:
-      "https://cdn.10minuteschool.com/images/thumbnails/IELTS_new_1_1.png",
-  },
-  {
-    name: "thumbnail",
-    resource_type: "image",
-    resource_value:
-      "https://cdn.10minuteschool.com/images/thumbnails/IELTS_new_16_9.png",
-  },
-  {
-    name: "preview_gallery",
-    resource_type: "image",
-    resource_value:
-      "https://cdn.10minuteschool.com/images/catalog/media/PDP_Banner-1_1726737298483.png",
-  },
-  {
-    name: "preview_gallery",
-    resource_type: "image",
-    resource_value:
-      "https://cdn.10minuteschool.com/images/catalog/media/PDP_Banner-2_1726736040872.png",
-  }
-];
-
-const PreviewGallery = () => {
+const PreviewGallery: React.FC<PreviewGalleryProps> = ({ resources }) => {
+  // const {} = resources;
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const active = resources[activeIndex];
 
+  // console.log(active);
   const handleNext = () => {
     setIsPlaying(false);
     if (activeIndex < resources.length - 1) {
@@ -74,7 +40,7 @@ const PreviewGallery = () => {
   const renderMain = () => {
     if (active.resource_type === "video" && isPlaying) {
       return (
-        <div className="relative pt-[56.25%] w-full rounded overflow-hidden shadow-md">
+        <div className="relative pt-[56.25%] w-full rounded overflow-hidden">
           <iframe
             className="absolute top-0 left-0 w-full h-full"
             src={`https://www.youtube.com/embed/${active.resource_value}?autoplay=1`}
@@ -89,8 +55,8 @@ const PreviewGallery = () => {
           <Image
             src={
               active.resource_type === "video"
-                ? active.thumbnail_url || active.resource_value
-                : active.resource_value
+                ? active.thumbnail_url || active.resource_value || ""
+                : active.resource_value || ""
             }
             alt="Main"
             fill
@@ -141,7 +107,7 @@ const PreviewGallery = () => {
                 }`}
               >
                 <Image
-                  src={thumb}
+                  src={thumb || ""}
                   alt="Thumb"
                   width={100}
                   height={60}
