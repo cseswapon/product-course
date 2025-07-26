@@ -28,6 +28,10 @@ const CourseLayout: React.FC<CourseLayoutProps> = ({ course }) => {
     (item) => item.type === "group_join_engagement"
   );
   const pointers = course.sections.find((item) => item.type === "pointers");
+
+  const content_preview = course.sections.find(
+    (item) => item.type === "content_preview"
+  );
   return (
     <>
       <CourseDetailsTab section={course.sections} />
@@ -35,7 +39,9 @@ const CourseLayout: React.FC<CourseLayoutProps> = ({ course }) => {
       {feature && <CourseFeature features={feature || []} />}
       {groupJoinEng && <GroupJoinEngagement groupJoin={groupJoinEng || []} />}
       {pointers && <CourseLearning pointers={pointers} />}
-      <CourseContentpreview />
+      {content_preview && (
+        <CourseContentpreview contentPreview={content_preview || []} />
+      )}
       <CourseDetails />
       <CourseExclucive />
       <CourseOffer />
