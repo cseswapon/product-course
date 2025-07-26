@@ -12,12 +12,17 @@ import StudentReview from "./StudentReview";
 import CourseClalssNeed from "./CourseClalssNeed";
 import CourseAsking from "./CourseAsking";
 import Testimonial from "../TestimonialCard/Testimonial";
+import { Course } from "@/types/course";
 
-const CourseLayout: React.FC = () => {
+interface CourseLayoutProps {
+  course: Course;
+}
+
+const CourseLayout: React.FC<CourseLayoutProps> = ({ course }) => {
+  console.log(course);
   return (
     <>
       <CourseDetailsTab />
-      {/* <h1>Course Details</h1> */}
       <CourseInstructor />
       <CourseFeature />
       <GroupJoinEngagement />

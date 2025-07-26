@@ -6,9 +6,23 @@ import Image from "next/image";
 import { IoMdCall } from "react-icons/io";
 import { PiTranslate } from "react-icons/pi";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  const currentLang = searchParams.get("lang") ?? "bn";
+  const nextLang = currentLang === "bn" ? "en" : "bn";
+
+  const toggleLanguage = () => {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("lang", nextLang);
+    router.push(`${pathname}?${params.toString()}`);
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#dbe1eb] bg-white md:h-[65px]">
@@ -45,6 +59,7 @@ const Header: React.FC = () => {
             </Link>
           </div>
         </div>
+
         <div className="items-center hidden gap-9 md:flex">
           <Link href="/">
             <Image
@@ -56,6 +71,7 @@ const Header: React.FC = () => {
             />
           </Link>
         </div>
+
         <div className="flex-1 hidden w-full pr-4 md:block">
           <div className="relative flex w-full flex-col items-start bg-white z-50">
             <div className="shadow-0 rounded-b-[23px] flex w-full items-center gap-2 rounded-t-[23px] border-0 border-[#dbe1eb] px-[12px] py-2 md:border">
@@ -85,6 +101,7 @@ const Header: React.FC = () => {
             </div>
           </div>
         </div>
+
         <nav className="hidden mr-4 xl:block">
           <ul className="flex items-center gap-2 lg:gap-4 text-sm font-medium text-[#4B5563]">
             {[
@@ -106,7 +123,6 @@ const Header: React.FC = () => {
                   {item === "english-centre" && "ইংলিশ সেন্টার"}
                   <MdOutlineKeyboardArrowDown className="inline-block text-lg font-extrabold" />
                 </Link>
-
                 <div className="absolute -left-3 top-3 hidden mt-2 space-y-2 bg-white border-gray-50  shadow-md group-hover:block w-max">
                   <Link
                     href={`/sub-menu/${item}`}
@@ -140,14 +156,16 @@ const Header: React.FC = () => {
             </li>
           </ul>
         </nav>
+
         <div className="flex items-center space-x-4 md:space-x-6">
-          <Link
+          <button
+            onClick={toggleLanguage}
             className="hidden cursor-pointer items-center gap-1 rounded border border-[#dbe1eb] px-2 py-[2px] hover:bg-slate-50 md:flex"
-            href="/"
           >
             <PiTranslate />
-            <span>EN</span>
-          </Link>
+            <span>{currentLang === "bn" ? "EN" : "BN"}</span>
+          </button>
+
           <Link
             href="tel:16910"
             className="hidden md:flex items-center gap-1 text-green-500"
@@ -155,6 +173,7 @@ const Header: React.FC = () => {
             <IoMdCall className="text-lg font-bold" />
             <span>16910</span>
           </Link>
+
           <Link
             className="flex items-center px-3 py-1 text-white rounded-md bg-green-500 md:px-6"
             href="/auth/login/?returnUrl=%2Fproduct%2Fielts-course%2F"
@@ -165,6 +184,7 @@ const Header: React.FC = () => {
           </Link>
         </div>
       </div>
+
       {mobileMenuOpen && (
         <div className="block md:hidden">
           <ul className="flex flex-col items-start px-4 py-2 space-y-2 bg-white border-t">

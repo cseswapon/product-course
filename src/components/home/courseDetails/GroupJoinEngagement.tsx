@@ -28,7 +28,7 @@ const GroupJoinEngagement = () => {
           <p className="mt-2 text-base" style={{ color: "#ededed" }}>
             IELTS ভালো score করার সেরা Strategies জানুন সেরাদের গাইডলাইনে ।
           </p>
-          <button className="mt-6 bg-green-500 px-2 text-white rounded p-2 px-3.5">
+          <button className="mt-6 bg-green-500 text-white rounded p-2 px-3.5">
             ফ্রি PDF Download করুন
           </button>
         </div>
