@@ -1,35 +1,43 @@
 "use client";
+import { Section } from "@/types/course";
 import { Collapse, CollapseProps, Button } from "antd";
-import { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { AiOutlinePhone } from "react-icons/ai";
 import { Element } from "react-scroll";
 
-const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
-`;
+interface CoursePointerProps {
+  faq: Section;
+}
 
-const items: CollapseProps["items"] = [
-  { key: "1", label: "This is panel header 1", children: <p>{text}</p> },
-  { key: "2", label: "This is panel header 2", children: <p>{text}</p> },
-  { key: "3", label: "This is panel header 3", children: <p>{text}</p> },
-  { key: "4", label: "This is panel header 4", children: <p>{text}</p> },
-  { key: "5", label: "This is panel header 5", children: <p>{text}</p> },
-];
+const CourseAsking: React.FC<CoursePointerProps> = ({ faq }) => {
+  const { values } = faq;
 
-const CourseAsking = () => {
   const [expandedKeys, setExpandedKeys] = useState<string[]>(["1"]);
   const [showAll, setShowAll] = useState(false);
 
   const onChange = (key: string | string[]) => {
     setExpandedKeys(Array.isArray(key) ? key : [key]);
-    console.log(key);
   };
 
   const toggleShowAll = () => {
     setShowAll((prev) => !prev);
   };
+
+  const items: CollapseProps["items"] = useMemo(() => {
+    return (
+      values?.map((item, index) => ({
+        key: String(index + 1),
+        label: (
+          <h3 className="text-sm font-semibold md:text-base">
+            {item.question}
+          </h3>
+        ),
+        children: (
+          <div dangerouslySetInnerHTML={{ __html: item.answer || "" }} />
+        ),
+      })) || []
+    );
+  }, [values]);
 
   return (
     <Element name="faq">
@@ -50,6 +58,7 @@ const CourseAsking = () => {
           </Button>
         )}
       </div>
+
       <div className="mb-6 bg-[#E5E7EB] pb-2 md:mb-12 md:bg-white md:py-0">
         <div className="bg-white pb-6 md:pb-0">
           <div className="mb-0">

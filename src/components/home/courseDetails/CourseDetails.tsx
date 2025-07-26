@@ -1,6 +1,7 @@
 "use client";
+import { Section } from "@/types/course";
 import { Collapse, CollapseProps, Button } from "antd";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Element } from "react-scroll";
 
 const text = `
@@ -15,7 +16,8 @@ const items: CollapseProps["items"] = [
   { key: "3", label: "This is panel header 3", children: <p>{text}</p> },
 ];
 
-const CourseDetails = () => {
+
+const CourseDetails:React.FC = () => {
   const [expandedKeys, setExpandedKeys] = useState<string[]>(["1"]);
   const [showAll, setShowAll] = useState(false);
 

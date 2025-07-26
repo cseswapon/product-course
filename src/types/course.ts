@@ -52,6 +52,12 @@ interface Value {
   thumbnail?: string;
   title_color?: string;
   top_left_icon_img?: string;
+  checklist?: string[];
+  file_type?: string;
+  file_url?: string;
+  video_thumbnail?: string;
+  answer?: string;
+  question?: string;
 }
 
 export interface Section {

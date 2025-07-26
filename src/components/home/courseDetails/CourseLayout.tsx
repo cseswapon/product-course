@@ -32,6 +32,14 @@ const CourseLayout: React.FC<CourseLayoutProps> = ({ course }) => {
   const content_preview = course.sections.find(
     (item) => item.type === "content_preview"
   );
+
+  
+  const feature_explanations = course.sections.find(
+    (item) => item.type === "feature_explanations"
+  );
+  const faq = course.sections.find((item) => item.type === "faq");
+
+
   return (
     <>
       <CourseDetailsTab section={course.sections} />
@@ -42,12 +50,16 @@ const CourseLayout: React.FC<CourseLayoutProps> = ({ course }) => {
       {content_preview && (
         <CourseContentpreview contentPreview={content_preview || []} />
       )}
+
       <CourseDetails />
-      <CourseExclucive />
+
+      {feature_explanations && (
+        <CourseExclucive feature_explanations={feature_explanations || []} />
+      )}
       <CourseOffer />
       <StudentReview />
       <CourseClalssNeed />
-      <CourseAsking />
+      {faq && <CourseAsking faq={faq} />}
       <Testimonial />
     </>
   );
