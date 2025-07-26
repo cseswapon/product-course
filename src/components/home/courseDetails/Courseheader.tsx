@@ -11,6 +11,7 @@ import CourseOffer from "./CourseOffer";
 import StudentReview from "./StudentReview";
 import CourseClalssNeed from "./CourseClalssNeed";
 import CourseAsking from "./CourseAsking";
+import Testimonial from "../TestimonialCard/Testimonial";
 
 const Courseheader: React.FC = () => {
   return (
@@ -28,6 +29,7 @@ const Courseheader: React.FC = () => {
       <StudentReview />
       <CourseClalssNeed />
       <CourseAsking />
+      <Testimonial />
     </>
   );
 };

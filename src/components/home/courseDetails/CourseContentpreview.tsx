@@ -36,7 +36,7 @@ const CourseContentPreview = () => {
         items={showAll ? items : items.slice(0, 3)}
         defaultActiveKey={["1"]}
         onChange={onChange}
-        expandIconPosition="right"
+        expandIconPosition="end"
       />
       {items.length > 3 && (
         <Button

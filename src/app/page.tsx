@@ -13,8 +13,7 @@ export default function Home() {
             <Courseheader />
           </div>
           <div className="col-span-2  order-1 md:order-2 relative">
-            {/* <div>hello kaka</div> */}
-            <StickyCourse/>
+            <StickyCourse />
           </div>
         </div>
       </main>

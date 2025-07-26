@@ -7,7 +7,7 @@ import CourseOutlate from "../CourseOutlate";
 const ThumbCard: React.FC = () => {
   
   return (
-    <section className="w-full md:max-w-[330px] lg:max-w-[400px] order-2 md:bg-white absolute right-0 md:top-0 md:absolute">
+    <section className="w-full md:max-w-[330px] lg:max-w-[400px] order-2 md:bg-white absolute right-0 md:top-0 md:absolute z-[9]">
       <div className="md:border-[#dbe1eb] md:border overflow-hidden">
         <div className="md:block hidden md:border">
           <PreviewGallery />
@@ -32,13 +32,13 @@ const ThumbCard: React.FC = () => {
           <CourseOutlate/>
         </div>
       </div>
-      <p className="justify-between hidden mt-4 text-sm text-center text-gray-400 md:flex md:flex-col lg:flex lg:flex-row">
+      <div className="justify-between hidden mt-4 text-sm text-center text-gray-400 md:flex md:flex-col lg:flex lg:flex-row">
         <span>কোর্সটি সম্পর্কে বিস্তারিত জানতে</span>
         <div className="flex items-center justify-center ml-2 underline cursor-pointer text-green">
           <IoMdCall className="text-lg font-bold" />
           <span>ফোন করুন (16910)</span>
         </div>
-      </p>
+      </div>
     </section>
   );
 };

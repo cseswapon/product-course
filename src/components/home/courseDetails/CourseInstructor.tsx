@@ -9,7 +9,7 @@ const CourseInstructor: React.FC = () => {
         কোর্স ইন্সট্রাক্টর
       </h2>
       <div className="flex items-center md:rounded-md md:border md:p-5">
-        <div className='class="rounded-[50%] overflow-hidden opacity-0 transition-opacity duration-300 ease-in-out"'>
+        <div className='class="rounded-[50%] overflow-hidden transition-opacity duration-300 ease-in-out"'>
           <Image
             src="https://cdn.10minuteschool.com/images/skills/lp/ms_onset.jpg"
             alt="monjerin"
