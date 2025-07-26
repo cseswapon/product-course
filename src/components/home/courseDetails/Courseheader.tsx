@@ -4,6 +4,13 @@ import CourseInstructor from "./CourseInstructor";
 import CourseFeature from "./CourseFeature";
 import GroupJoinEngagement from "./GroupJoinEngagement";
 import CourseLearning from "./CourseLearning";
+import CourseContentpreview from "./CourseContentpreview";
+import CourseDetails from "./CourseDetails";
+import CourseExclucive from "./CourseExclucive";
+import CourseOffer from "./CourseOffer";
+import StudentReview from "./StudentReview";
+import CourseClalssNeed from "./CourseClalssNeed";
+import CourseAsking from "./CourseAsking";
 
 const Courseheader: React.FC = () => {
   return (
@@ -14,6 +21,13 @@ const Courseheader: React.FC = () => {
       <CourseFeature />
       <GroupJoinEngagement />
       <CourseLearning />
+      <CourseContentpreview />
+      <CourseDetails />
+      <CourseExclucive />
+      <CourseOffer />
+      <StudentReview />
+      <CourseClalssNeed />
+      <CourseAsking />
     </>
   );
 };
