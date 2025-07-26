@@ -1,5 +1,4 @@
 "use client";
-import { Section } from "@/types/course";
 import { Collapse, CollapseProps, Button } from "antd";
 import React, { useState } from "react";
 import { Element } from "react-scroll";
@@ -18,13 +17,13 @@ const items: CollapseProps["items"] = [
 
 
 const CourseDetails:React.FC = () => {
-  const [expandedKeys, setExpandedKeys] = useState<string[]>(["1"]);
+  // const [expandedKeys, setExpandedKeys] = useState<string[]>(["1"]);
   const [showAll, setShowAll] = useState(false);
 
-  const onChange = (key: string | string[]) => {
-    setExpandedKeys(Array.isArray(key) ? key : [key]);
-    console.log(key);
-  };
+  // const onChange = (key: string | string[]) => {
+  //   setExpandedKeys(Array.isArray(key) ? key : [key]);
+  //   console.log(key);
+  // };
 
   const toggleShowAll = () => {
     setShowAll((prev) => !prev);
@@ -38,7 +37,7 @@ const CourseDetails:React.FC = () => {
       <Collapse
         items={showAll ? items : items.slice(0, 3)}
         defaultActiveKey={["1"]}
-        onChange={onChange}
+        // onChange={onChange}
         expandIconPosition="end"
       />
       {items.length > 3 && (

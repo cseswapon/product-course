@@ -12,12 +12,12 @@ interface CoursePointerProps {
 const CourseAsking: React.FC<CoursePointerProps> = ({ faq }) => {
   const { values } = faq;
 
-  const [expandedKeys, setExpandedKeys] = useState<string[]>(["1"]);
+  // const [expandedKeys, setExpandedKeys] = useState<string[]>(["1"]);
   const [showAll, setShowAll] = useState(false);
 
-  const onChange = (key: string | string[]) => {
-    setExpandedKeys(Array.isArray(key) ? key : [key]);
-  };
+  // const onChange = (key: string | string[]) => {
+  //   // setExpandedKeys(Array.isArray(key) ? key : [key]);
+  // };
 
   const toggleShowAll = () => {
     setShowAll((prev) => !prev);
@@ -46,7 +46,7 @@ const CourseAsking: React.FC<CoursePointerProps> = ({ faq }) => {
         <Collapse
           items={showAll ? items : items.slice(0, 3)}
           defaultActiveKey={["1"]}
-          onChange={onChange}
+          // onChange={onChange}
           expandIconPosition="end"
         />
         {items.length > 3 && (
