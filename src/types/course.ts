@@ -72,7 +72,7 @@ export interface Course {
 
 export interface ApiResponse {
   code: number;
-  data: Partial<Course>;
+  data: Course;
   error?: [];
   message: string;
   payload: [];

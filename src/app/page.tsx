@@ -49,7 +49,7 @@ export default async function page({
             <CourseLayout course={course?.data} />
           </div>
           <div className="col-span-2 order-1 md:order-2 relative">
-            <StickyCourse />
+            <StickyCourse course={course?.data} />
           </div>
         </div>
       </main>

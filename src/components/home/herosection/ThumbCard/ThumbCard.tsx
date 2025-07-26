@@ -11,6 +11,7 @@ interface ThubCardProps {
 
 const ThumbCard: React.FC<ThubCardProps> = ({ course }) => {
   // console.log(course.media);
+  // console.log(course.checklist);
   return (
     <section className="w-full md:max-w-[330px] lg:max-w-[400px] order-2 md:bg-white absolute right-0 md:top-0 md:absolute z-[9]">
       <div className="md:border-[#dbe1eb] md:border overflow-hidden">
@@ -34,7 +35,7 @@ const ThumbCard: React.FC<ThubCardProps> = ({ course }) => {
           </div>
         </div>
         <div className="hidden md:block">
-          <CourseOutlate />
+          <CourseOutlate checklist={course.checklist || []} />
         </div>
       </div>
       <div className="justify-between hidden mt-4 text-sm text-center text-gray-400 md:flex md:flex-col lg:flex lg:flex-row">

@@ -3,8 +3,13 @@ import React, { useState, useEffect } from "react";
 import CourceSell from "../herosection/CourceSell";
 import CourseOutlate from "../herosection/CourseOutlate";
 import { IoMdCall } from "react-icons/io";
+import { Course } from "@/types/course";
 
-const StickyCourse: React.FC = () => {
+interface CourseLayoutProps {
+  course: Course;
+}
+
+const StickyCourse: React.FC<CourseLayoutProps> = ({ course }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
@@ -31,8 +36,8 @@ const StickyCourse: React.FC = () => {
         visibility: isVisible ? "visible" : "hidden",
       }}
     >
-      <CourceSell />
-      <CourseOutlate />
+      <CourceSell sell={course.cta_text} />
+      <CourseOutlate checklist={course.checklist || []} />
       <div className="justify-between hidden mt-4 text-sm text-center text-gray-400 md:flex md:flex-col lg:flex lg:flex-row px-3">
         <span>কোর্সটি সম্পর্কে বিস্তারিত জানতে</span>
         <div className="flex items-center justify-center ml-2 underline cursor-pointer text-green">

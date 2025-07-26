@@ -23,7 +23,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ course }) => {
       >
         <div className="md:grid grid-cols-1 md:grid-cols-5 gap-4 container mx-auto lg:px-[10rem]">
           <div className="md:hidden block">
-            <PreviewGallery resources={course.media}/>
+            <PreviewGallery resources={course.media} />
           </div>
           <div className="col-span-3 text-white space-y-5 order-2 md:order-1 md:px-0 px-2">
             <h1 className="text-white my-2 text-[21px] font-semibold  md:text-4xl">
@@ -58,7 +58,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ course }) => {
       </section>
       <div className="md:hidden block px-1 py-2 space-y-2">
         <CourceSell sell={course.cta_text} />
-        <CourseOutlate />
+        <CourseOutlate checklist={course.checklist || []} />
       </div>
     </>
   );
