@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { Element } from "react-scroll";
 
 const CourseFeature = () => {
   const features = [
@@ -37,7 +39,7 @@ const CourseFeature = () => {
   ];
 
   return (
-    <div id="features">
+    <Element name="Features">
       <div className="flex flex-col gap-3">
         <h2 className="text-xl font-semibold leading-[30px] text-black">
           কোর্সটি যেভাবে সাজানো হয়েছে
@@ -69,7 +71,7 @@ const CourseFeature = () => {
           ))}
         </div>
       </div>
-    </div>
+    </Element>
   );
 };
 

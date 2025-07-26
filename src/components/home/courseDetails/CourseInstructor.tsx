@@ -1,10 +1,12 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Element } from "react-scroll";
 
 const CourseInstructor: React.FC = () => {
   return (
-    <>
+    <Element name="Instructors" className="my-5 md:mb-16">
       <h2 className="mb-4 text-xl font-semibold md:text-2xl my-5">
         কোর্স ইন্সট্রাক্টর
       </h2>
@@ -52,7 +54,7 @@ const CourseInstructor: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </Element>
   );
 };
 

@@ -1,9 +1,11 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import { Element } from "react-scroll";
 
 const CourseOffer: React.FC = () => {
   return (
-    <div className="mb-14">
+    <Element name="Free_items" className="mb-14">
       <h2 className="my-5 text-xl font-semibold leading-[30px] text-black">
         এই কোর্সের সাথে ফ্রি পাচ্ছেন–
       </h2>
@@ -15,7 +17,6 @@ const CourseOffer: React.FC = () => {
           borderRadius: "20px",
         }}
       >
-        
         <div className="text-white divide-y rounded-lg divide-dashed divide-slate-600 p-4 px-10 relative z-[1] border-2">
           <div className="relative flex flex-col items-start justify-between gap-1 px-5 py-5 overflow-hidden md:flex-row">
             <div className="flex flex-col items-start gap-1">
@@ -68,7 +69,7 @@ const CourseOffer: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Element>
   );
 };
 

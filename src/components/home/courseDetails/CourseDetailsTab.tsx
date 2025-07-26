@@ -2,15 +2,28 @@
 
 import React, { useRef, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { Link } from "react-scroll";
 
+// const tabs = [
+//   "Instructors",
+//   "Features",
+//   "Pointers",
+//   "About",
+//   "Feature_explanations",
+//   "Free_items",
+//   "Testimonials",
+//   "Faq",
+// ];
 const tabs = [
-  "কোর্স ইন্ট্রোডাকশন",
-  "কোর্সটি যেভাবে সাজানো হয়েছে",
-  "কোর্সটি করে যা শিখবেন",
-  "কোর্স সম্পর্কে বিস্তারিত",
-  "কোর্স এক্সক্লুসিভ ফিচার",
-  "শিক্ষার্থীরা যা বলছে",
-  "সচরাচর জিজ্ঞাসা",
+  { en: "Instructors", bn: "কোর্স ইন্ট্রোডাকশন" },
+  { en: "Features", bn: "কোর্সটি যেভাবে সাজানো হয়েছে" },
+  { en: "Pointers", bn: "কোর্সটি করে যা শিখবেন" },
+  { en: "About", bn: "কোর্স সম্পর্কে বিস্তারিত" },
+  { en: "Feature_explanations", bn: "কোর্স এক্সক্লুসিভ ফিচার" },
+  { en: "Testimonials", bn: "শিক্ষার্থীরা যা বলছে" },
+  { en: "Faq", bn: "সচরাচর জিজ্ঞাসা" },
+  // "Free_items" is missing in the Bangla version, so leaving it blank
+  { en: "Free_items", bn: "" },
 ];
 
 const CourseDetailsTab: React.FC = () => {
@@ -61,14 +74,17 @@ const CourseDetailsTab: React.FC = () => {
 
       <div
         ref={scrollRef}
-        className="flex overflow-x-auto no-scrollbar mx-10 space-x-6 cursor-grab active:cursor-grabbing"
+        className="flex overflow-x-auto no-scrollbar mx-10 space-x-6 cursor-pointer active:cursor-grabbing"
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseUp}
         onMouseUp={handleMouseUp}
       >
         {tabs.map((tab, index) => (
-          <button
+          <Link
+            to={tab.en}
+            smooth={true}
+            duration={500}
             key={index}
             onClick={() => setActiveIndex(index)}
             className={`whitespace-nowrap text-[1rem] pb-1 border-b-2 transition-all duration-200 ${
@@ -77,8 +93,8 @@ const CourseDetailsTab: React.FC = () => {
                 : "border-transparent text-gray-600 hover:text-green-500"
             }`}
           >
-            {tab}
-          </button>
+            {tab.bn}
+          </Link>
         ))}
       </div>
 

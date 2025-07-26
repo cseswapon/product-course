@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TestimonialCard from "./TestimonialCard";
+import { Element } from "react-scroll";
 
 const Testimonial: React.FC = () => {
   const settings = {
@@ -25,7 +26,7 @@ const Testimonial: React.FC = () => {
   };
 
   return (
-    <>
+    <Element name="Testimonials">
       <h1 className="mb-4 text-xl font-semibold md:text-2xl">
         আপনার জন্য আরও কিছু কোর্স
       </h1>
@@ -50,7 +51,7 @@ const Testimonial: React.FC = () => {
           </div>
         </Slider>
       </div>
-    </>
+    </Element>
   );
 };
 

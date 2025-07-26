@@ -1,10 +1,10 @@
+"use client";
 import { AiOutlineCheckCircle } from "react-icons/ai";
-
-
+import { Element } from "react-scroll";
 
 const CourseLearning: React.FC = () => {
   return (
-    <div id="pointers">
+    <Element name="Pointers">
       <div className="mb-6 md:mb-10 relative bg-[#E5E7EB] py-2 md:bg-white md:py-0">
         <div className="pt-6 pb-6 bg-white md:pb-0 md:pt-0">
           <div>
@@ -88,7 +88,7 @@ const CourseLearning: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Element>
   );
 };
 

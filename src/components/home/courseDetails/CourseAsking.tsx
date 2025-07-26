@@ -2,6 +2,7 @@
 import { Collapse, CollapseProps, Button } from "antd";
 import { useState } from "react";
 import { AiOutlinePhone } from "react-icons/ai";
+import { Element } from "react-scroll";
 
 const text = `
   A dog is a type of domesticated animal.
@@ -31,7 +32,7 @@ const CourseAsking = () => {
   };
 
   return (
-    <>
+    <Element name="Faq">
       <div className="mb-5">
         <h1 className="mb-2 text-xl font-semibold md:mb-4">সচরাচর জিজ্ঞাসা</h1>
         <Collapse
@@ -68,7 +69,7 @@ const CourseAsking = () => {
           </div>
         </div>
       </div>
-    </>
+    </Element>
   );
 };
 

@@ -1,6 +1,7 @@
 "use client";
 import { Collapse, CollapseProps, Button } from "antd";
 import { useState } from "react";
+import { Element } from "react-scroll";
 
 const text = `
   A dog is a type of domesticated animal.
@@ -30,7 +31,7 @@ const CourseContentPreview = () => {
   };
 
   return (
-    <div className="mb-5">
+    <Element name="About" className="mb-5">
       <h1 className="mb-2 text-xl font-semibold md:mb-4">কন্টেন্ট প্রিভিউ</h1>
       <Collapse
         items={showAll ? items : items.slice(0, 3)}
@@ -46,7 +47,7 @@ const CourseContentPreview = () => {
           {showAll ? "Show Less" : "See More"}
         </Button>
       )}
-    </div>
+    </Element>
   );
 };
 
