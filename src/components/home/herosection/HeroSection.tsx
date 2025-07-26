@@ -4,8 +4,12 @@ import ThumbCard from "./ThumbCard/ThumbCard";
 import PreviewGallery from "./ThumbCard/PreviewGallery";
 import CourceSell from "./CourceSell";
 import CourseOutlate from "./CourseOutlate";
-
-const HeroSection: React.FC = () => {
+import { Course } from "@/types/course";
+interface HeroSectionProps {
+  course: Course;
+}
+const HeroSection: React.FC<HeroSectionProps> = ({ course }) => {
+  console.log(course);
   return (
     <>
       <section
@@ -23,7 +27,7 @@ const HeroSection: React.FC = () => {
           </div>
           <div className="col-span-3 text-white space-y-5 order-2 md:order-1 md:px-0 px-2">
             <h1 className="text-white my-2 text-[21px] font-semibold  md:text-4xl">
-              IELTS Course by Munzereen Shahid
+              {course.title || "N/A"}
             </h1>
             <div>
               <button className="flex flex-row flex-wrap gap-2 text-white">

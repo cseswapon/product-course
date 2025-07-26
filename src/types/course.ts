@@ -63,3 +63,12 @@ export interface Course {
   secondary_cta_group?: [];
   delivery_method: string;
 }
+
+export interface ApiResponse {
+  code: number;
+  data: Course;
+  error?: [];
+  message: string;
+  payload: [];
+  status_code: number;
+}

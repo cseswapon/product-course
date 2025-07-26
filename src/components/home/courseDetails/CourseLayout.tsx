@@ -19,7 +19,7 @@ interface CourseLayoutProps {
 }
 
 const CourseLayout: React.FC<CourseLayoutProps> = ({ course }) => {
-  console.log(course);
+  // console.log(course);
   return (
     <>
       <CourseDetailsTab />
