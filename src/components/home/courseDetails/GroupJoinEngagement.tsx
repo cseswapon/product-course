@@ -9,6 +9,7 @@ const GroupJoinEngagement = () => {
         backgroundImage:
           "url('https://cdn.10minuteschool.com/images/Free_class_card_BG_1722414654287.png')",
         backgroundSize: "cover",
+        borderRadius: 25,
       }}
     >
       <div className="flex gap-4 p-4 md:p-8 rounded-xl overflow-hidden">
@@ -27,7 +28,7 @@ const GroupJoinEngagement = () => {
           <p className="mt-2 text-base" style={{ color: "#ededed" }}>
             IELTS ভালো score করার সেরা Strategies জানুন সেরাদের গাইডলাইনে ।
           </p>
-          <button className="mt-6 bg-green-500 px-2 text-white rounded">
+          <button className="mt-6 bg-green-500 px-2 text-white rounded p-2 px-3.5">
             ফ্রি PDF Download করুন
           </button>
         </div>

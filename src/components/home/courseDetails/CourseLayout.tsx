@@ -13,7 +13,7 @@ import CourseClalssNeed from "./CourseClalssNeed";
 import CourseAsking from "./CourseAsking";
 import Testimonial from "../TestimonialCard/Testimonial";
 
-const Courseheader: React.FC = () => {
+const CourseLayout: React.FC = () => {
   return (
     <>
       <CourseDetailsTab />
@@ -34,4 +34,4 @@ const Courseheader: React.FC = () => {
   );
 };
 
-export default Courseheader;
+export default CourseLayout;
