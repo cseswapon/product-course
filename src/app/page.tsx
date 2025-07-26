@@ -1,5 +1,6 @@
 import Courseheader from "@/components/home/courseDetails/Courseheader";
 import HeroSection from "@/components/home/herosection/HeroSection";
+import StickyCourse from "@/components/home/StickyCourse/StickyCourse";
 
 export default function Home() {
   console.log(process.env.NEXT_PUBLIC_API_BASE_URL);
@@ -11,7 +12,10 @@ export default function Home() {
           <div className="col-span-3  space-y-5 order-2 md:order-1 md:px-0 px-2">
             <Courseheader />
           </div>
-          <div className="col-span-2  order-1 md:order-2 relative"></div>
+          <div className="col-span-2  order-1 md:order-2 relative">
+            {/* <div>hello kaka</div> */}
+            <StickyCourse/>
+          </div>
         </div>
       </main>
     </>

@@ -42,7 +42,7 @@ const CourseOutlate: React.FC = () => {
   ];
   return (
     <>
-      <div className="grid py-2 pt-0 md:p-4 md:border">
+      <div className="grid py-2 pt-0 md:p-4">
         <p className="mb-4 text-xl text-black font-semibold">
           এই কোর্সে যা থাকছে
         </p>
