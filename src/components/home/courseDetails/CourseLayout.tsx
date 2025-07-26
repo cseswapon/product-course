@@ -24,12 +24,15 @@ const CourseLayout: React.FC<CourseLayoutProps> = ({ course }) => {
     (item) => item.type === "instructors"
   );
   const feature = course.sections.find((item) => item.type === "features");
+  const groupJoinEng = course.sections.find(
+    (item) => item.type === "group_join_engagement"
+  );
   return (
     <>
       <CourseDetailsTab section={course.sections} />
       {instructor && <CourseInstructor section={instructor || []} />}
       {feature && <CourseFeature features={feature || []} />}
-      <GroupJoinEngagement />
+      {groupJoinEng && <GroupJoinEngagement groupJoin={groupJoinEng || []} />}
       <CourseLearning />
       <CourseContentpreview />
       <CourseDetails />

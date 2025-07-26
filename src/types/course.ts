@@ -39,6 +39,19 @@ interface Value {
   icon?: string;
   subtitle?: string;
   title?: string;
+  background?: {
+    image: string;
+    primary_color: string;
+    secondary_color: string;
+  };
+  cta?: {
+    clicked_url: string;
+    color: string;
+    text: string;
+  };
+  thumbnail?: string;
+  title_color?: string;
+  top_left_icon_img?: string;
 }
 
 export interface Section {
