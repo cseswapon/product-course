@@ -19,7 +19,7 @@ interface CourseLayoutProps {
 }
 
 const CourseLayout: React.FC<CourseLayoutProps> = ({ course }) => {
-  console.log(course.sections);
+  // console.log(course.sections);
   const instructor = course.sections.find(
     (item) => item.type === "instructors"
   );
@@ -33,7 +33,6 @@ const CourseLayout: React.FC<CourseLayoutProps> = ({ course }) => {
     (item) => item.type === "content_preview"
   );
 
-  
   const feature_explanations = course.sections.find(
     (item) => item.type === "feature_explanations"
   );
@@ -41,8 +40,6 @@ const CourseLayout: React.FC<CourseLayoutProps> = ({ course }) => {
   const testimonials = course.sections.find(
     (item) => item.type === "testimonials"
   );
-
-
 
   return (
     <>

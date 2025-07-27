@@ -15,7 +15,7 @@ interface CoursePointerProps {
 const Testimonial: React.FC<CoursePointerProps> = ({ testimonials }) => {
   const { values } = testimonials;
 
-  console.log(values);
+  // console.log(values);
 
   const settings = {
     dots: false,

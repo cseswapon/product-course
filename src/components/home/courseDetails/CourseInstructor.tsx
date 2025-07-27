@@ -11,7 +11,7 @@ interface CourseInstructorProps {
 
 const CourseInstructor: React.FC<CourseInstructorProps> = ({ section }) => {
   const {values} = section;
-  console.log(values);
+  // console.log(values);
   return (
     <Element name="instructors" className="my-5 md:mb-16">
       <h2 className="mb-4 text-xl font-semibold md:text-2xl my-5">
