@@ -1,43 +1,36 @@
 "use client";
+import { Section } from "@/types/course";
 import { Collapse, CollapseProps, Button } from "antd";
 import React, { useState } from "react";
 import { Element } from "react-scroll";
 
-const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
-`;
+interface CoursePointerProps {
+  about: Section;
+}
 
-const items: CollapseProps["items"] = [
-  { key: "1", label: "This is panel header 1", children: <p>{text}</p> },
-  { key: "2", label: "This is panel header 2", children: <p>{text}</p> },
-  { key: "3", label: "This is panel header 3", children: <p>{text}</p> },
-];
-
-
-const CourseDetails:React.FC = () => {
-  // const [expandedKeys, setExpandedKeys] = useState<string[]>(["1"]);
+const CourseDetails: React.FC<CoursePointerProps> = ({ about }) => {
+  const { values } = about;
   const [showAll, setShowAll] = useState(false);
 
-  // const onChange = (key: string | string[]) => {
-  //   setExpandedKeys(Array.isArray(key) ? key : [key]);
-  //   console.log(key);
-  // };
+  // Convert values to Collapse items
+  const items: CollapseProps["items"] = values.map((value, index) => ({
+    key: String(index + 1),
+    label: <div dangerouslySetInnerHTML={{ __html: value.title || "" }} />,
+    children: <div dangerouslySetInnerHTML={{ __html: value.description || "" }} />,
+  }));
 
   const toggleShowAll = () => {
     setShowAll((prev) => !prev);
   };
 
   return (
-    <Element name="About" className="mb-5">
+    <Element name="about" className="mb-5 relative">
       <h1 className="text-xl font-semibold md:mb-4 md:text-2xl">
         কোর্স সম্পর্কে বিস্তারিত
       </h1>
       <Collapse
         items={showAll ? items : items.slice(0, 3)}
         defaultActiveKey={["1"]}
-        // onChange={onChange}
         expandIconPosition="end"
       />
       {items.length > 3 && (

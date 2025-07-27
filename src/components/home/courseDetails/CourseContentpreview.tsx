@@ -25,8 +25,10 @@ const CourseContentPreview: React.FC<CoursePointerProps> = ({
 
   return (
     <Element name="content_preview" className="mb-5">
-      <h1 className="mb-2 text-xl font-semibold md:mb-4">কন্টেন্ট প্রিভিউ</h1>
-      {values.length === 0 && <p>No data found</p>}
+      {values.length > 0 && (
+        <h1 className="mb-2 text-xl font-semibold md:mb-4">কন্টেন্ট প্রিভিউ</h1>
+      )}
+      {/* {values.length === 0 && <p>No data found</p>} */}
       {values.map((item, idx) => (
         <Collapse
           key={idx}
