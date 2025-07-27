@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Here's a professional `README.md` file for your IELTS Course product page project built with Next.js, Tailwind CSS, and TypeScript. This README includes setup instructions, technologies used, project structure, and deployment details.
 
-## Getting Started
+---
 
-First, run the development server:
+````markdown
+# IELTS Course Product Page 🌐
+
+A modern and responsive IELTS course landing page built with **Next.js**, **TypeScript**, and **TailwindCSS**, showcasing content from the [10 Minute School Public API](https://api.10minuteschool.com/).
+
+## 🧠 Project Description
+
+This project replicates the [IELTS Course by Munzereen Shahid](https://10minuteschool.com/product/ielts-course/) page using Next.js with server-side rendering (SSR), localization support, and reusable components.
+
+Data is fetched from 10 Minute School's public API and rendered dynamically based on the selected language (`en` or `bn`).
+
+🔗 **Live Preview**: [https://10ms-course.vercel.app](https://10ms-course.vercel.app)
+
+---
+
+## 🚀 Features
+
+- ✅ Server-side Rendering (SSR)
+- 🌐 Localization (`en` / `bn`)
+- 📹 Embedded YouTube trailer
+- 🧑‍🏫 Instructor section
+- 🧾 Course layout & pointers
+- 📋 Checklists
+- ⚡ SEO integration (via API)
+- 🧩 Modular, reusable components
+- 🔁 Incremental Static Regeneration (ISR)
+- 🔧 Type-safe with TypeScript
+- 💨 Styled with TailwindCSS
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [TailwindCSS](https://tailwindcss.com/)
+- **UI Components**: [Ant Design](https://ant.design/)
+- **Carousel**: `react-slick` with `slick-carousel`
+- **Icons**: `react-icons`
+- **SEO**: Server-rendered meta from API
+
+---
+
+## 📦 Installation
 
 ```bash
+# Clone the repo
+git clone https://github.com/cseswapon/product-course
+cd product-course
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+````
+
+---
+
+## 🌍 API Integration
+
+**Endpoint:**
+
+```
+GET https://api.10minuteschool.com/discovery-service/api/v1/products/ielts-course?lang=en|bn
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Headers:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+X-TENMS-SOURCE-PLATFORM: web
+Accept: application/json
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🌐 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+This project is deployed on **Vercel** for production:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+> 🔗 [https://10ms-course.vercel.app](https://10ms-course.vercel.app)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+You can deploy your own version by:
 
-## Deploy on Vercel
+1. Pushing to a GitHub repo
+2. Connecting the repo to Vercel
+3. Adding environment variables (if needed)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> Designed and built with ❤️ for 10 Minute School by \[Swapon Saha].
+
+```
+
+---
+
+### ✅ Final Steps
+
+- Replace `cseswapon` and `cseswaponsaha@gmail.com` with your GitHub username and actual contact email.
+- Commit the `README.md` to your repo and push to GitHub.
+---
+
+```
