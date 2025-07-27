@@ -222,7 +222,8 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="mt-8 text-center text-xs text-neutral-600 border-t pt-5 border-[#dbe1eb]">
-        স্বত্ব © ২০১৫-২০২৪ টেন মিনিট স্কুল কতৃক সর্বস্বত্ব সংরক্ষিত
+        © 2015 - {new Date().getFullYear()} টেন মিনিট স্কুল কতৃক সর্বস্বত্ব
+        সংরক্ষিত
       </div>
     </footer>
   );

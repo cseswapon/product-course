@@ -15,13 +15,13 @@ const CourceSell: React.FC<CourceSellProps> = ({ sell }) => {
         <div className="flex items-center justify-between md:flex-col md:items-start">
           <div className="md:mb-3">
             <div className="inline-block text-2xl text-black font-semibold">
-              ৳3850
+              ৳ 1000
             </div>
             <span className="inline-flex items-center ml-2">
               <del className="text-black font-normal md:text-xl">৳5000</del>
               <div className="c-Tukmu inline-block ml-2">
                 <p className="card-price text-green-600 font-medium">
-                  ১১৫০ ৳ ছাড়
+                  10 ৳ ছাড়
                 </p>
               </div>
             </span>

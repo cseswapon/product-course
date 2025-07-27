@@ -8,7 +8,7 @@ import CourseContentpreview from "./CourseContentpreview";
 import CourseDetails from "./CourseDetails";
 import CourseExclucive from "./CourseExclucive";
 import CourseOffer from "./CourseOffer";
-import StudentReview from "./StudentReview";
+// import StudentReview from "./StudentReview";
 import CourseClalssNeed from "./CourseClalssNeed";
 import CourseAsking from "./CourseAsking";
 import Testimonial from "../TestimonialCard/Testimonial";
@@ -59,7 +59,7 @@ const CourseLayout: React.FC<CourseLayoutProps> = ({ course }) => {
         <CourseExclucive feature_explanations={feature_explanations || []} />
       )}
       <CourseOffer />
-      <StudentReview />
+      {/* <StudentReview /> */}
       <CourseClalssNeed />
       {faq && <CourseAsking faq={faq} />}
       {testimonials && <Testimonial testimonials={testimonials} />}

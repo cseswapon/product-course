@@ -11,7 +11,7 @@ const CourseClalssNeed: React.FC = () => {
               <h2 className="mb-4 text-xl font-semibold md:text-2xl">
                 ক্লাস করার জন্য প্রয়োজন হবে
               </h2>
-              <div className="py-2 rounded-md md:border md:p-6">
+              <div className="py-2 rounded-md md:border border-[#dbe1eb] md:p-6">
                 <ul>
                   <li className="flex items-start gap-2 mb-2">
                     <FaCheckCircle className="text-[#6294F8]" size={24} />
@@ -32,7 +32,7 @@ const CourseClalssNeed: React.FC = () => {
           <h2 className="mb-4 text-xl font-semibold md:text-2xl">
             যেভাবে পেমেন্ট করবেন
           </h2>
-          <div className="rounded-md md:border md:p-4 xs:py-2">
+          <div className="rounded-md md:border border-[#dbe1eb] md:p-4 xs:py-2">
             <p>
               কীভাবে পেমেন্ট করবেন তা বিস্তারিত জানতে{" "}
               <span

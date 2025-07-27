@@ -35,7 +35,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 
   return (
     <div className="mr-4 flex items-center justify-center">
-      <div className="relative mt-5 w-[260px] md:w-[372px] rounded-lg border p-6 flex min-h-[250px] md:min-h-[297px] flex-col justify-between bg-white">
+      <div className="relative mt-5 w-[260px] md:w-[372px] rounded-lg border border-[#dbe1eb] p-6 flex min-h-[250px] md:min-h-[297px] flex-col justify-between bg-white">
         <div className="absolute -top-4 left-5 flex h-[38px] w-[38px] items-center justify-center rounded-full bg-[#FCE0D6] p-2">
           <FaQuoteLeft className="text-[#D33242] text-xs" />
         </div>
