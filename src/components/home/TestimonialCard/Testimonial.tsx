@@ -25,6 +25,7 @@ const Testimonial: React.FC<CoursePointerProps> = ({ testimonials }) => {
     slidesToScroll: 2,
     autoplay: true,
     autoplaySpeed: 3000,
+    arrows: false,
     responsive: [
       {
         breakpoint: 768,
@@ -42,7 +43,7 @@ const Testimonial: React.FC<CoursePointerProps> = ({ testimonials }) => {
         আপনার জন্য আরও কিছু কোর্স
       </h1>
       <div className="slider-container">
-        <Slider {...settings}>
+        <Slider  {...settings}>
           {values?.map((item, idx) => (
             <div key={idx}>
               <TestimonialCard
